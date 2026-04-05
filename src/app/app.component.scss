@@ -1,0 +1,201 @@
+/* app.component.scss */
+
+:host {
+  --ion-background-color: #f8fafc;
+  --ion-text-color: #1e2937;
+}
+
+ion-content {
+  --background: #f8fafc;
+}
+
+// ====================== CARDS GERAIS ======================
+ion-card {
+  margin: 16px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+
+  ion-card-header {
+    background: linear-gradient(135deg, #1e40af, #3b82f6);
+    color: white;
+    padding: 16px 20px;
+
+    ion-card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      ion-icon {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  ion-card-content {
+    padding: 20px;
+  }
+}
+
+// ====================== TIPOGRAFIA ======================
+h2, h3 {
+  color: #1e40af;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+}
+
+p {
+  color: #475569;
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+// ====================== BOTÕES ======================
+ion-button {
+  margin: 6px 0;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+// Botões de ação específicas
+ion-button[color="success"] {
+  --background: #22c55e;
+}
+
+ion-button[color="danger"] {
+  --background: #ef4444;
+}
+
+ion-button[color="primary"] {
+  --background: #3b82f6;
+}
+
+ion-button[color="tertiary"] {
+  --background: #8b5cf6;
+}
+
+ion-button[color="medium"] {
+  --background: #64748b;
+}
+
+// ====================== GUICHÊS ======================
+.guiche-card {
+  ion-card-header {
+    background: #f1f5f9;
+    color: #1e40af;
+  }
+}
+
+// ====================== FILAS DE ESPERA ======================
+.fila-header {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ion-list {
+  background: transparent;
+
+  ion-item {
+    --background: #ffffff;
+    --border-color: #e2e8f0;
+    margin-bottom: 6px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+    ion-label {
+      h2 {
+        font-size: 1rem;
+        color: #1e2937;
+        margin: 0;
+      }
+    }
+
+    ion-note {
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// ====================== ÚLTIMAS CHAMADAS ======================
+.last-calls {
+  ion-item {
+    --background: #f0f9ff;
+    border-left: 4px solid #3b82f6;
+    border-radius: 8px;
+
+    h2 {
+      color: #1e40af;
+    }
+  }
+}
+
+// ====================== RELATÓRIOS ======================
+.report-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+
+  p {
+    background: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    font-weight: 500;
+  }
+}
+
+// ====================== RESPONSIVO ======================
+@media (max-width: 768px) {
+  ion-card {
+    margin: 12px 0;
+  }
+
+  ion-card-content {
+    padding: 16px;
+  }
+
+  ion-grid {
+    ion-col {
+      margin-bottom: 12px;
+    }
+  }
+
+  .fila-header {
+    font-size: 1rem;
+  }
+}
+
+// ====================== MELHORIAS VISUAIS ======================
+
+// Badge de status no guichê
+ion-badge {
+  font-size: 0.95rem;
+  padding: 6px 12px;
+}
+
+// Scroll suave nas listas longas
+ion-list {
+  max-height: 320px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+// Efeito de hover nos cards
+ion-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
