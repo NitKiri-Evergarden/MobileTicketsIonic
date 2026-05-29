@@ -4,7 +4,7 @@ import {
   IonHeader, IonToolbar, IonTitle, IonContent, IonButtons, IonButton,
   IonCard, IonCardHeader, IonCardTitle, IonCardContent,
   IonList, IonItem, IonLabel, IonBadge, IonGrid, IonRow, IonCol,
-  IonIcon 
+  IonIcon, IonNote
 } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { people, time, ticket, statsChart, close, play } from 'ionicons/icons';
@@ -17,7 +17,7 @@ import { people, time, ticket, statsChart, close, play } from 'ionicons/icons';
     IonHeader, IonToolbar, IonTitle, IonContent, IonButtons, IonButton,
     IonCard, IonCardHeader, IonCardTitle, IonCardContent,
     IonList, IonItem, IonLabel, IonBadge, IonGrid, IonRow, IonCol,
-    IonIcon
+    IonIcon, IonNote
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
